@@ -1,0 +1,36 @@
+.component {
+  width: fit-content;
+  box-shadow: inset 0 0 10px 2px white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.parent {
+  padding: 1rem;
+}
+
+.parent__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.child {
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 10px;
+}
+
+.a1 {
+  border: 3px solid lime;
+}
+
+.a2 {
+  border: 3px solid blue;
+}
+
+.a3 {
+  border: 3px solid cyan;
+}
