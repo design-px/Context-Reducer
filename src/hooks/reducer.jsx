@@ -31,22 +31,23 @@ export const reducerObj = (state, action) => {
     case 'increment3':
       return { ...state, increment3: state.increment3 + action.value }
     case 'theme':
-      return { ...state, theme: changeTheme(state.theme, action.value) }
+      return { ...state, theme: changeTheme(state.theme) }
     case 'reset':
-      return initialObjState
+      return { ...initialObjState, theme: changeTheme() }
     default:
       return state
   }
 }
 
 
-const changeTheme = (current, changed) => {
+const changeTheme = (current) => {
   const body = document.querySelector('body')
 
   if (current === 'dark') {
     body.classList.replace('dark', 'light')
-  } else
+    return current = 'light'
+  } else {
     body.classList.replace('light', 'dark')
-
-  return current === changed ? 'light' : 'dark'
+    return current = 'dark'
+  }
 }
